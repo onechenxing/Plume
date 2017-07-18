@@ -1,0 +1,14 @@
+文件命名:
+小写字母和下划线(不用驼峰主要防止不同操作系统对大小写的识别问题)
+如：code.txt , hello_world.txt
+
+变量命名:
+首字母小写的驼峰表示法
+如: a , name , attackValue
+
+代码块/函数命名:
+首字母大小的驼峰表示法
+如: Speak , GoHome
+
+如有函数作为参数调用需用括号包住：
+如：print:(npc.Speak:'hello'),'test'

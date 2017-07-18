@@ -1,0 +1,33 @@
+﻿print:'-- test block --'
+
+SayHi = :name1,name2=''{
+    return 'hi:'+name1+name2
+}
+printu:(SayHi:'cx1','cx2'),'hi:cx1cx2'
+printu:(SayHi:'cx1'),'hi:cx1'
+printu:(SayHi:name2 = 'cx1',name1 = 'cx2'),'hi:cx2cx1'
+
+outValue = 'smile';
+GetName = :index{
+    names = ['jake','lucy','mike']
+    return names[index] + ' ' + outValue
+}
+printu:(GetName:0),'jake smile'
+printu:(GetName:1),'lucy smile'
+printu:(GetName:2),'mike smile'
+
+
+print:'Nested Block'
+
+Big = {
+	a = 1
+	Inner = {
+		b = 2
+		printu:a,'1'
+	}
+	Inner:
+}
+Big:
+print:Big.Inner
+Big.Inner:
+printu:Big.Inner.b,'2'

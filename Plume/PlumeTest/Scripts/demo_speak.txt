@@ -1,0 +1,17 @@
+﻿print:'<demo_speak>'
+//对话函数定义（一个字一个字显示）
+Speak = :name,txt{
+    printc:name + ':'
+    for c in txt{
+        wait:0.1
+        printc:c    
+    }
+    print:
+    wait:1
+}
+
+//执行对话语句
+Speak:'Player','Hello,I am player.Who are you?'
+Speak:'AI','Hello,I am AI.'
+Speak:'Player','Nice to meet you!'
+Speak:'AI','Nice to meet you too!'

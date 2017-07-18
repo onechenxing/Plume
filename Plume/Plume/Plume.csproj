@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4855D4C3-8D27-4D01-BC62-21B4D1D3FD48}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Plume</RootNamespace>
+    <AssemblyName>Plume</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\AST\ASTNode.cs" />
+    <Compile Include="Core\AST\ExprListNode.cs" />
+    <Compile Include="Core\AST\Expr\AndNode.cs" />
+    <Compile Include="Core\AST\Expr\BlockNode.cs" />
+    <Compile Include="Core\AST\Expr\CallExprNode.cs" />
+    <Compile Include="Core\AST\Expr\CheckNode.cs" />
+    <Compile Include="Core\AST\Expr\DivideNode.cs" />
+    <Compile Include="Core\AST\Expr\IExprNode.cs" />
+    <Compile Include="Core\AST\Expr\InnerAssignNode.cs" />
+    <Compile Include="Core\AST\Expr\LoadExprNode.cs" />
+    <Compile Include="Core\AST\Expr\MinusNode.cs" />
+    <Compile Include="Core\AST\Expr\MultiplyNode.cs" />
+    <Compile Include="Core\AST\Expr\NameNode.cs" />
+    <Compile Include="Core\AST\Expr\NumberNode.cs" />
+    <Compile Include="Core\AST\Expr\OrNode.cs" />
+    <Compile Include="Core\AST\Expr\PlusNode.cs" />
+    <Compile Include="Core\AST\Expr\QueueNameNode.cs" />
+    <Compile Include="Core\AST\Expr\StringNode.cs" />
+    <Compile Include="Core\AST\Expr\TableNode.cs" />
+    <Compile Include="Core\AST\StatListNode.cs" />
+    <Compile Include="Core\AST\Stat\AssignNode.cs" />
+    <Compile Include="Core\AST\Stat\CallStatNode.cs" />
+    <Compile Include="Core\AST\Stat\ForNode.cs" />
+    <Compile Include="Core\AST\Stat\IfNode.cs" />
+    <Compile Include="Core\AST\Stat\IStatNode.cs" />
+    <Compile Include="Core\AST\Stat\LoadStatNode.cs" />
+    <Compile Include="Core\AST\Stat\QueueAssignNode.cs" />
+    <Compile Include="Core\AST\Stat\ReturnNode.cs" />
+    <Compile Include="Core\AST\Stat\WaitNode.cs" />
+    <Compile Include="Core\BuildInClass\Blocks\Block.cs" />
+    <Compile Include="Core\BuildInClass\Blocks\BaseBuildInBlock.cs" />
+    <Compile Include="Core\BuildInClass\Blocks\BaseBlock.cs" />
+    <Compile Include="Core\BuildInClass\Blocks\RangeBlock.cs" />
+    <Compile Include="Core\BuildInClass\Blocks\LenBlock.cs" />
+    <Compile Include="Core\BuildInClass\Blocks\PrintcBlock.cs" />
+    <Compile Include="Core\BuildInClass\Blocks\PrintBlock.cs" />
+    <Compile Include="Core\BuildInClass\Blocks\PrintuBlock.cs" />
+    <Compile Include="Core\BuildInClass\Iterators\RangeIterator.cs" />
+    <Compile Include="Core\BuildInClass\Reflections\ReflectionClassAsContainer.cs" />
+    <Compile Include="Core\BuildInClass\Reflections\ReflectionMethodAsBlock.cs" />
+    <Compile Include="Core\BuildInClass\Reflections\ReflectionUtil.cs" />
+    <Compile Include="Core\BuildInClass\Iterators\IIterator.cs" />
+    <Compile Include="Core\BuildInClass\Iterators\StringIterator.cs" />
+    <Compile Include="Core\BuildInClass\Iterators\TableIterator.cs" />
+    <Compile Include="Core\BuildInClass\Objects\IContainer.cs" />
+    <Compile Include="Core\BuildInClass\Objects\Table.cs" />
+    <Compile Include="Core\BuildInClass\Waits\IWait.cs" />
+    <Compile Include="Core\BuildInClass\Waits\WaitSignal.cs" />
+    <Compile Include="Core\BuildInClass\Waits\WaitTime.cs" />
+    <Compile Include="Core\Lexer\BaseLexer.cs" />
+    <Compile Include="Core\Lexer\MyLexer.cs" />
+    <Compile Include="Core\Lexer\Token.cs" />
+    <Compile Include="Core\Memory\MemorySpace.cs" />
+    <Compile Include="Core\Memory\MemorySpaceStack.cs" />
+    <Compile Include="Core\Parser\BaseParser.cs" />
+    <Compile Include="Core\Parser\MyPaser.cs" />
+    <Compile Include="Core\Parser\MyPaser_Base.cs" />
+    <Compile Include="Core\Parser\MyPaser_Block.cs" />
+    <Compile Include="Core\Parser\MyPaser_Exprs.cs" />
+    <Compile Include="Core\Parser\MyPaser_Program.cs" />
+    <Compile Include="Core\VM\PlumeVM.cs" />
+    <Compile Include="Core\VM\PlumeVM_Bind.cs" />
+    <Compile Include="Core\VM\PlumeVM_Call.cs" />
+    <Compile Include="Core\VM\PlumeVM_Cpu.cs" />
+    <Compile Include="Core\VM\PlumeVM_OP.cs" />
+    <Compile Include="Core\VM\PlumeVM_Params.cs" />
+    <Compile Include="Core\VM\VMCode.cs" />
+    <Compile Include="Core\VM\VMCodeBuilder.cs" />
+    <Compile Include="Core\VM\VMUtil.cs" />
+    <Compile Include="Core\VM\VMStackFrame.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="copy_dll_to_unity_demo.py" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

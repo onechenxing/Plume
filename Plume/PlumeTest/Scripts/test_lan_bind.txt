@@ -1,0 +1,25 @@
+﻿print:'-- test bind c# --'
+
+print:'bind C# class:'
+print:BindCSharpTestData
+printu:BindCSharpTestData.ver,1.01
+printu:(BindCSharpTestData.GetGameName:),'Test Game'
+printu:BindCSharpTestData.instance.money,100
+printu:(BindCSharpTestData.instance.GetTaskStep:'task1'),0
+BindCSharpTestData.instance.SetTaskStep:'task1',101 //把task1设置成101了
+
+print:'bind C# object:'
+print:Data
+printu:Data.ver,1.01
+printu:(Data.GetGameName:),'Test Game'
+printu:Data.money,100
+printu:(Data.GetTaskStep:'task1'),101
+Data.SetTaskStep:'task1',102 //把task1设置成102了
+
+print:'bind C# static method:'
+print:GetGameName
+printu:(GetGameName:),'Test Game'
+
+print:'bind C# object method:'
+print:GetTaskStep
+printu:(GetTaskStep:'task1'),102

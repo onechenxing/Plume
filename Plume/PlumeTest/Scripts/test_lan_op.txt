@@ -1,0 +1,5 @@
+﻿print:'-- test op --'
+a = 2 * (2 + 1)
+b = 'a' + 'b' + 'c'
+c = 10/5*2-1
+printu:a,b,c,'6,abc,3'

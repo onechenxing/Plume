@@ -1,0 +1,19 @@
+﻿//test invoke
+var1 = 1
+var2 = 'abc'
+fun1 = {
+	print:'fun1'
+}
+fun2 = :n{
+	print:'fun2',n
+}
+
+//test language
+load:'test_lan_op.txt'		//基础运行测试
+load:'test_lan_if.txt'		//if语句测试
+load:'test_lan_for.txt'		//for语句测试
+load:'test_lan_table.txt'	//表测试
+load:'test_lan_block.txt'	//代码块测试
+load:'test_lan_bind.txt'	//测试绑定C#
+load:'test_lan_wait.txt'	//测试wait函数
+

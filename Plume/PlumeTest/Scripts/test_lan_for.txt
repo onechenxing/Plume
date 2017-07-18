@@ -1,0 +1,29 @@
+﻿print:'-- test for --'
+print:'string:'
+str = ''
+for c in 'abcdefg'{
+	str = str + c
+}
+printu:str,'abcdefg'
+
+print:'table:'
+tab = [1,2,a='aa',b='bb',c=999]
+str = ''
+for i in tab{
+	str = str + i
+}
+printu:str,'12aabb999'
+
+print:'range:'
+str = ''
+for i in range:5{
+	str = str + i
+}
+printu:str,'01234'
+
+str = ''
+for i in range:1,10,2{
+	str = str + i
+}
+printu:str,'13579'
+

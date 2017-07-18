@@ -1,0 +1,9 @@
+﻿print:'-- test wait --'
+
+print:'wait 1 sec'
+wait:1
+print:'do something'
+
+print:'wait move'
+wait:Data.WaitTest:
+print:'do something'

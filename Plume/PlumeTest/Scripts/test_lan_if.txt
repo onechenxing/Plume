@@ -1,0 +1,58 @@
+﻿print:'-- test if --'
+
+Check = :n{
+	if n == 1 {
+		return 1
+	}elif n >= 10{
+		return 10
+	}elif n < 0{
+		return -1
+	}else{
+		return 0
+	}
+}
+
+printu:(Check:1),'1'
+printu:(Check:10),'10'
+printu:(Check:20),'10'
+printu:(Check:-1),'-1'
+printu:(Check:5),'0'
+
+a = 1
+if a > 0{
+	a = 0
+}
+printu:a,'0'
+
+a = -1
+if a <= 0{
+	a = 0
+}
+printu:a,'0'
+
+a = 0
+if a != 0{
+	a= 1
+}
+printu:a,'0'
+
+
+print:'check and:'
+y = 1
+n = 0
+re = 0
+if y and n{
+	re = 1
+}else{
+	re = 0
+}
+printu:re,'0'
+
+print:'check or:'
+if y or n{
+	re = 1
+}else{
+	re = 0
+}
+printu:re,'1'
+

@@ -1,0 +1,63 @@
+﻿print:'-- test table --'
+print:'Array:'
+arr0 = []
+print:arr0
+arr1 = [1,2,3];
+arr2 = [5,4,3];
+print:'arr1+arr2:'
+printu:arr1+arr2,'[6,6,6]'
+print:'arr1*3:'
+printu:arr1*3,'[3,6,9]'
+arr1[0] = 100
+printu:arr1[0],'100'
+printu:(len:arr1),'3'
+arr1[len:arr1] = 1000
+printu:(len:arr1),'4'
+arr1[len:arr1] = 1001
+printu:(len:arr1),'5'
+printu:arr1,'[100,2,3,1000,1001]'
+
+
+print:'Dic:'
+dic1 = [a='aaa',b='bbb',c='ccc']
+dic2 = [1,2,a='aaa',b='bbb']
+print:'dic1[b]:'
+printu:dic1['b'],'bbb'
+print:'dic2[0]:'
+printu:dic2[0],1
+print:'dic2[b]:'
+printu:dic2['b'],'bbb'
+print:'dic2.b:'
+printu:dic2.b,'bbb'
+dic1['c'] = 100
+printu:dic1,'[a=aaa,b=bbb,c=100]'
+dic2[0] = 100
+dic2.c = 'newc'
+printu:dic2,'[100,2,a=aaa,b=bbb,c=newc]'
+printu:(len:dic2),'2'
+
+print:'Vec:'
+vec1 = [x=0,y=0,z=0]
+vec2 = [x=10,y=0,z=5]
+print:'vec1+vec2:'
+printu:vec1+vec2,'[x=10,y=0,z=5]'
+
+print:'Multi:'
+m1 = [1,2,[3,4],arr=[5,6,7]]
+printu:m1,'[1,2,[3,4],arr=[5,6,7]]'
+printu:m1[2][0],'3'
+m1[2][1] = 0
+printu:m1,'[1,2,[3,0],arr=[5,6,7]]'
+printu:m1.arr,'[5,6,7]'
+printu:m1.arr[2],'7'
+m1.arr[2] = 100
+printu:m1,'[1,2,[3,0],arr=[5,6,100]]'
+m2 = [name='cx',items=[a='a',b='b',c='c']]
+printu:m2,'[name=cx,items=[a=a,b=b,c=c]]'
+printu:m2.name,'cx'
+printu:m2.items,'[a=a,b=b,c=c]'
+printu:m2.items.c,'c'
+m2.call = {return 'call'}
+print:m2
+print:'m2.call:'
+printu:m2.call:,'call'

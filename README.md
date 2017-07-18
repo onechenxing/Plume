@@ -55,7 +55,7 @@ step[0] = {
 
 // 1：再次对话，给任务
 step[1] = {
-Speak:chief,'村子的附近有个大树王'
+	Speak:chief,'村子的附近有个大树王'
 	Speak:chief,'传说那是远古时代就一直生长的'
 	Speak:chief,'它保护着村子和村民'
 	Speak:chief,'你去看看吗?'

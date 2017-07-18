@@ -1,19 +1,19 @@
 # Plume
 New Game Script Language
 
-## 简介：
+### 简介：
 新的游戏脚本语言。主要用于游戏剧情等脚本编写。
 当前版本使用C#实现，可以很好的嵌入Unity游戏引擎。
 
-## 特点：
+### 特点：
 可同时在主线程运行多个虚拟机，语言自带等待(wait)函数，可方便实现语言级的等待功能。
 
-详细文档请参考Doc目录。
+(详细文档请参考Doc目录)
 
-## Demo:
+### Demo:
 任务：村长的问候
 
-点击说话模块代码(speak_pack.plu)
+	点击说话模块代码(speak_pack.plu)
 ```
 //点击说话函数
 Speak = :role,txt{
@@ -24,7 +24,7 @@ Speak = :role,txt{
 }
 ```
 
-任务代码(npc_chief_hello.plu)
+	任务代码(npc_chief_hello.plu)
 ```
 task = '村长的问候'
 
